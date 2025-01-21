@@ -49,16 +49,16 @@
     ],
     "buildPresets": [
         {
-            "name": "msvc-debug",
-            "configurePreset": "msvc",
-            "displayName": "Debug",
-            "configuration": "Debug"
-        },
-        {
             "name": "msvc-release",
             "configurePreset": "msvc",
             "displayName": "Release",
             "configuration": "RelWithDebInfo"
+        },
+        {
+            "name": "msvc-debug",
+            "configurePreset": "msvc",
+            "displayName": "Debug",
+            "configuration": "Debug"
         },
         {
             "name": "mingw-debug",
