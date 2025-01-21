@@ -1,6 +1,9 @@
 # Live Motion Magnification
 An OpenCV/Qt based realtime application for Eulerian Video Magnification. Works with multiple videos and cameras at the same time and let's you export the magnified videos.
 
+## DoubleStrike Fork and binaries
+The reason for this fork is to support any config changes to build with modern Visual Studio (not just VSCode) and to provide usable binaries.  At the moment, the binaries are available but I have not retooled the build system.
+
 ## Examples
 ![Color Magnified Video](pictures/j_color-vid.png)
 
@@ -39,7 +42,7 @@ They provide demo videos on their page and the team did a fantastic job in resea
     - Image Buffer: Select the length of an image buffer before processing those images. If dropping frames if buffer is full is disabled, your capture rate will be same the same as your processing rate.
 - Video
     - Choose a video. Compatibility is given if your computer supports the codec. Valid file endings are .avi .mp4 .m4v .mkv .mov .wmv
-- Resolution: This does not work for videos on Ubuntu/Linux yet (Windows not tested). For cameras check the supported modes from camera manufacturer and type in the resolution specified for a mode.
+- Resolution: This does not work for videos on Ubuntu/Linux yet (does work on Windows, but use a supported resolution+framerate combo). For cameras check the supported modes from camera manufacturer and type in the resolution specified for a mode.
 - Frames per Second: Some cameras support multiple modes with different resolution/fps/etc. . Setting the framerate will change into a mode with a framerate near the one you typed in. For videos, some mp4-files have a bad header where OpenCV can't read out the framerate, which will normally be set to 30FPS. Anyway here you can set it manually.
 
 ![Connect Dialog](pictures/connect_dialog.png)
