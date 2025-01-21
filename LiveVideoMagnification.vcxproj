@@ -71,9 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Qt\6.8.1\msvc2022_64\include\QtCore</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Qt\6.8.1\msvc2022_64\include\QtCore</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;D:\Git\Live-Video-Magnification\OpenCV\build\include</LibraryPath>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;D:\Git\Live-Video-Magnification\OpenCV\build\include;E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;E:\Qt\6.8.1\msvc2022_64\include\Qt3DInput</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,6 +110,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -136,57 +140,57 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="external\qxtSlider\qxtglobal.cpp" />
-    <ClCompile Include="external\qxtSlider\qxtspanslider.cpp" />
-    <ClCompile Include="main\helper\MatToQImage.cpp" />
-    <ClCompile Include="main\helper\SharedImageBuffer.cpp" />
-    <ClCompile Include="main\magnification\Magnificator.cpp" />
-    <ClCompile Include="main\magnification\RieszPyramid.cpp" />
-    <ClCompile Include="main\magnification\SpatialFilter.cpp" />
-    <ClCompile Include="main\magnification\TemporalFilter.cpp" />
-    <ClCompile Include="main\threads\CaptureThread.cpp" />
-    <ClCompile Include="main\threads\PlayerThread.cpp" />
-    <ClCompile Include="main\threads\ProcessingThread.cpp" />
-    <ClCompile Include="main\threads\SavingThread.cpp" />
-    <ClCompile Include="main\ui\CameraConnectDialog.cpp" />
-    <ClCompile Include="main\ui\CameraView.cpp" />
-    <ClCompile Include="main\ui\FrameLabel.cpp" />
-    <ClCompile Include="main\ui\MagnifyOptions.cpp" />
-    <ClCompile Include="main\ui\MainWindow.cpp" />
-    <ClCompile Include="main\ui\VideoView.cpp" />
+    <ClCompile Include="src\external\qxtSlider\qxtglobal.cpp" />
+    <ClCompile Include="src\external\qxtSlider\qxtspanslider.cpp" />
+    <ClCompile Include="src\main\helper\MatToQImage.cpp" />
+    <ClCompile Include="src\main\helper\SharedImageBuffer.cpp" />
+    <ClCompile Include="src\main\magnification\Magnificator.cpp" />
+    <ClCompile Include="src\main\magnification\RieszPyramid.cpp" />
+    <ClCompile Include="src\main\magnification\SpatialFilter.cpp" />
+    <ClCompile Include="src\main\magnification\TemporalFilter.cpp" />
+    <ClCompile Include="src\main\threads\CaptureThread.cpp" />
+    <ClCompile Include="src\main\threads\PlayerThread.cpp" />
+    <ClCompile Include="src\main\threads\ProcessingThread.cpp" />
+    <ClCompile Include="src\main\threads\SavingThread.cpp" />
+    <ClCompile Include="src\main\ui\CameraConnectDialog.cpp" />
+    <ClCompile Include="src\main\ui\CameraView.cpp" />
+    <ClCompile Include="src\main\ui\FrameLabel.cpp" />
+    <ClCompile Include="src\main\ui\MagnifyOptions.cpp" />
+    <ClCompile Include="src\main\ui\MainWindow.cpp" />
+    <ClCompile Include="src\main\ui\VideoView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="external\qxtSlider\qxtglobal.h" />
-    <ClInclude Include="external\qxtSlider\qxtnamespace.h" />
-    <ClInclude Include="external\qxtSlider\qxtspanslider.h" />
-    <ClInclude Include="external\qxtSlider\qxtspanslider_p.h" />
-    <ClInclude Include="main\helper\ComplexMat.h" />
-    <ClInclude Include="main\helper\MatToQImage.h" />
-    <ClInclude Include="main\helper\SharedImageBuffer.h" />
-    <ClInclude Include="main\magnification\Magnificator.h" />
-    <ClInclude Include="main\magnification\RieszPyramid.h" />
-    <ClInclude Include="main\magnification\SpatialFilter.h" />
-    <ClInclude Include="main\magnification\TemporalFilter.h" />
-    <ClInclude Include="main\other\Buffer.h" />
-    <ClInclude Include="main\other\Config.h" />
-    <ClInclude Include="main\other\Structures.h" />
-    <ClInclude Include="main\threads\CaptureThread.h" />
-    <ClInclude Include="main\threads\PlayerThread.h" />
-    <ClInclude Include="main\threads\ProcessingThread.h" />
-    <ClInclude Include="main\threads\SavingThread.h" />
-    <ClInclude Include="main\ui\CameraConnectDialog.h" />
-    <ClInclude Include="main\ui\CameraView.h" />
-    <ClInclude Include="main\ui\FrameLabel.h" />
-    <ClInclude Include="main\ui\MagnifyOptions.h" />
-    <ClInclude Include="main\ui\MainWindow.h" />
-    <ClInclude Include="main\ui\VideoView.h" />
+    <ClInclude Include="src\external\qxtSlider\qxtglobal.h" />
+    <ClInclude Include="src\external\qxtSlider\qxtnamespace.h" />
+    <ClInclude Include="src\external\qxtSlider\qxtspanslider.h" />
+    <ClInclude Include="src\external\qxtSlider\qxtspanslider_p.h" />
+    <ClInclude Include="src\main\helper\ComplexMat.h" />
+    <ClInclude Include="src\main\helper\MatToQImage.h" />
+    <ClInclude Include="src\main\helper\SharedImageBuffer.h" />
+    <ClInclude Include="src\main\magnification\Magnificator.h" />
+    <ClInclude Include="src\main\magnification\RieszPyramid.h" />
+    <ClInclude Include="src\main\magnification\SpatialFilter.h" />
+    <ClInclude Include="src\main\magnification\TemporalFilter.h" />
+    <ClInclude Include="src\main\other\Buffer.h" />
+    <ClInclude Include="src\main\other\Config.h" />
+    <ClInclude Include="src\main\other\Structures.h" />
+    <ClInclude Include="src\main\threads\CaptureThread.h" />
+    <ClInclude Include="src\main\threads\PlayerThread.h" />
+    <ClInclude Include="src\main\threads\ProcessingThread.h" />
+    <ClInclude Include="src\main\threads\SavingThread.h" />
+    <ClInclude Include="src\main\ui\CameraConnectDialog.h" />
+    <ClInclude Include="src\main\ui\CameraView.h" />
+    <ClInclude Include="src\main\ui\FrameLabel.h" />
+    <ClInclude Include="src\main\ui\MagnifyOptions.h" />
+    <ClInclude Include="src\main\ui\MainWindow.h" />
+    <ClInclude Include="src\main\ui\VideoView.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="main\ui\CameraConnectDialog.ui" />
-    <None Include="main\ui\CameraView.ui" />
-    <None Include="main\ui\MagnifyOptions.ui" />
-    <None Include="main\ui\MainWindow.ui" />
-    <None Include="main\ui\VideoView.ui" />
+    <None Include="src\main\ui\CameraConnectDialog.ui" />
+    <None Include="src\main\ui\CameraView.ui" />
+    <None Include="src\main\ui\MagnifyOptions.ui" />
+    <None Include="src\main\ui\MainWindow.ui" />
+    <None Include="src\main\ui\VideoView.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

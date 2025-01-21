@@ -13,17 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\external">
-      <UniqueIdentifier>{329f92ce-27ad-4bd9-a099-abd9c587ab50}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\external">
-      <UniqueIdentifier>{d8fccaeb-6431-4e6f-9e6d-c46cdb729936}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\main">
       <UniqueIdentifier>{a25e0611-c61d-4932-a81b-9df2bae07555}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\main">
       <UniqueIdentifier>{6511702f-4873-466c-9d7f-b2fbae50cbb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external">
+      <UniqueIdentifier>{d3fa3b78-0e81-4721-af5f-d60eb5aac60d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external">
+      <UniqueIdentifier>{0c0f8f1b-9d63-4796-8761-ac08622b0f41}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -35,150 +35,140 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="external\qxtSlider\qxtglobal.cpp">
-      <Filter>Source Files\external</Filter>
+    <ClCompile Include="src\external\qxtSlider\qxtglobal.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\qxtSlider\qxtspanslider.cpp">
-      <Filter>Source Files\external</Filter>
+    <ClCompile Include="src\external\qxtSlider\qxtspanslider.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\CameraConnectDialog.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\helper\MatToQImage.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\CameraView.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\helper\SharedImageBuffer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\FrameLabel.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\magnification\Magnificator.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\MagnifyOptions.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\magnification\RieszPyramid.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\MainWindow.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\magnification\SpatialFilter.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\ui\VideoView.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\magnification\TemporalFilter.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\threads\CaptureThread.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\threads\CaptureThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\threads\PlayerThread.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\threads\PlayerThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\threads\ProcessingThread.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\threads\ProcessingThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\threads\SavingThread.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\threads\SavingThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\magnification\Magnificator.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\CameraConnectDialog.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\magnification\RieszPyramid.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\CameraView.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\magnification\SpatialFilter.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\FrameLabel.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\magnification\TemporalFilter.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\MagnifyOptions.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\helper\MatToQImage.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\MainWindow.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main\helper\SharedImageBuffer.cpp">
-      <Filter>Source Files\main</Filter>
+    <ClCompile Include="src\main\ui\VideoView.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="external\qxtSlider\qxtglobal.h">
-      <Filter>Header Files\external</Filter>
+    <ClInclude Include="src\external\qxtSlider\qxtglobal.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\qxtSlider\qxtnamespace.h">
-      <Filter>Header Files\external</Filter>
+    <ClInclude Include="src\external\qxtSlider\qxtnamespace.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\qxtSlider\qxtspanslider.h">
-      <Filter>Header Files\external</Filter>
+    <ClInclude Include="src\external\qxtSlider\qxtspanslider.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\qxtSlider\qxtspanslider_p.h">
-      <Filter>Header Files\external</Filter>
+    <ClInclude Include="src\external\qxtSlider\qxtspanslider_p.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\helper\ComplexMat.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\helper\ComplexMat.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\helper\MatToQImage.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\helper\MatToQImage.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\helper\SharedImageBuffer.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\helper\SharedImageBuffer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\magnification\Magnificator.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\magnification\Magnificator.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\magnification\RieszPyramid.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\magnification\RieszPyramid.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\magnification\SpatialFilter.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\magnification\SpatialFilter.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\magnification\TemporalFilter.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\magnification\TemporalFilter.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\other\Buffer.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\other\Buffer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\other\Config.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\other\Config.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\other\Structures.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\other\Structures.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\threads\CaptureThread.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\threads\CaptureThread.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\threads\PlayerThread.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\threads\PlayerThread.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\threads\ProcessingThread.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\threads\ProcessingThread.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\threads\SavingThread.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\threads\SavingThread.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\CameraConnectDialog.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\CameraConnectDialog.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\CameraView.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\CameraView.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\FrameLabel.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\FrameLabel.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\MagnifyOptions.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\MagnifyOptions.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\MainWindow.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\MainWindow.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main\ui\VideoView.h">
-      <Filter>Header Files\main</Filter>
+    <ClInclude Include="src\main\ui\VideoView.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="main\ui\CameraConnectDialog.ui">
-      <Filter>Header Files\main</Filter>
-    </None>
-    <None Include="main\ui\CameraView.ui">
-      <Filter>Header Files\main</Filter>
-    </None>
-    <None Include="main\ui\MagnifyOptions.ui">
-      <Filter>Header Files\main</Filter>
-    </None>
-    <None Include="main\ui\MainWindow.ui">
-      <Filter>Header Files\main</Filter>
-    </None>
-    <None Include="main\ui\VideoView.ui">
-      <Filter>Header Files\main</Filter>
-    </None>
+    <None Include="src\main\ui\CameraConnectDialog.ui" />
+    <None Include="src\main\ui\CameraView.ui" />
+    <None Include="src\main\ui\MagnifyOptions.ui" />
+    <None Include="src\main\ui\MainWindow.ui" />
+    <None Include="src\main\ui\VideoView.ui" />
   </ItemGroup>
 </Project>
