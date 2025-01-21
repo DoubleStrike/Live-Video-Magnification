@@ -1,7 +1,7 @@
 # Live Motion Magnification
 An OpenCV/Qt based realtime application for Eulerian Video Magnification. Works with multiple videos and cameras at the same time and let's you export the magnified videos.
 
-## DoubleSTrike Fork and binaries
+## DoubleStrike Fork and binaries
 The reason for this fork is to support any config changes to build with modern Visual Studio (not just VSCode) and to provide usable binaries.  At the moment, the binaries are available but I have not retooled the build system.
 
 ## Examples
