@@ -7,7 +7,7 @@
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
-                "CMAKE_MAKE_PROGRAM": "C:/Qt/Tools/Ninja/ninja.exe"
+                "CMAKE_MAKE_PROGRAM": "C:/utl/ninja.exe"
             }
         },
         {
@@ -15,11 +15,11 @@
             "hidden": true,
             "inherits": "ninja-nmc-base",
             "cacheVariables": {
-                "CMAKE_PREFIX_PATH": "C:/Qt/6.8.1/msvc2022_64",
-                "OpenCV_DIR": "C:/opencv/build"
+                "CMAKE_PREFIX_PATH": "E:/Qt/6.8.1/msvc2022_64",
+                "OpenCV_DIR": "D:/Git/Live-Video-Magnification/OpenCV/build"
             },
             "environment": {
-                "PATH": "C:/Qt/6.8.1/msvc2022_64/bin;C:/opencv/build/x64/vc16/bin;$penv{PATH}"
+                "PATH": "E:/Qt/6.8.1/msvc2022_64/bin;C:/opencv/build/x64/vc16/bin;$penv{PATH}"
             }
         },
         {
@@ -27,13 +27,13 @@
             "hidden": true,
             "inherits": "ninja-nmc-base",
             "cacheVariables": {
-                "CMAKE_PREFIX_PATH": "C:/Qt/6.8.1/mingw_64",
-                "OpenCV_DIR": "C:/OpenCV-MinGW-Build-OpenCV-4.5.5-x64",
-                "CMAKE_C_COMPILER": "C:/mingw64/bin/gcc.exe",
-                "CMAKE_CXX_COMPILER": "C:/mingw64/bin/g++.exe"
+                "CMAKE_PREFIX_PATH": "E:/Qt/6.8.1/mingw_64",
+                "OpenCV_DIR": "D:/Git/Live-Video-Magnification/OpenCV/build",
+                "CMAKE_C_COMPILER": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe",
+                "CMAKE_CXX_COMPILER": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe"
             },
             "environment": {
-                "PATH": "C:/Qt/6.8.1/mingw_64/bin;C:/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/bin;C:/mingw64/bin;$penv{PATH}"
+                "PATH": "D:/Git/Live-Video-Magnification/OpenCV/build/bin;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/;D:/Git/Live-Video-Magnification/OpenCV/build/x64/vc16/bin;$penv{PATH}"
             }
         },
         {
