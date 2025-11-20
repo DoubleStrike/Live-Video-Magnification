@@ -79,8 +79,8 @@
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;D:\Git\Live-Video-Magnification\OpenCV\build\include;E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;E:\Qt\6.8.1\msvc2022_64\include\Qt3DInput</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;E:\Qt\6.8.1\msvc2022_64\include\QtGui;E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;D:\Git\Live-Video-Magnification\OpenCV\build\include;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Qt\6.8.1\msvc2022_64\lib;D:\Git\Live-Video-Magnification\OpenCV\build\x64\vc16\lib</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -139,7 +139,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;opencv_world4100.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
