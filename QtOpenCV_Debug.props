@@ -28,7 +28,7 @@
         Qt6Cored.lib;
         Qt6Guid.lib;
         Qt6Widgetsd.lib;
-        opencv_world410d.lib;
+        opencv_world4100d.lib;
         %(AdditionalDependencies)
       </AdditionalDependencies>
     </Link>
