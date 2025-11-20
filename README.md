@@ -2,7 +2,7 @@
 An OpenCV/Qt based realtime application for Eulerian Video Magnification. Works with multiple videos and cameras at the same time and let's you export the magnified videos.
 
 ## DoubleStrike Fork and binaries
-The reason for this fork is to support any config changes to build with modern Visual Studio (not just VSCode) and to provide usable binaries.  At the moment, the binaries are available but I have not retooled the build system.
+The reason for this fork is to support any config changes to build with modern Visual Studio (not just VSCode) and to provide usable binaries.  As of 11/20/2025, the build system is fully working under VS 2022! You will need to have OpenCV downloaded along with Qt, and set the paths in the appropriate property sheets. I'm looking into a better, more sustainable path management strategy.
 
 ## Examples
 ![Color Magnified Video](pictures/j_color-vid.png)
