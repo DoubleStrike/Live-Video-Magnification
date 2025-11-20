@@ -6,13 +6,18 @@
     <ClCompile>
       <!-- Include directories -->
       <AdditionalIncludeDirectories>
-        E:\Qt\6.8.1\msvc2022_64\include;
-        E:\Qt\6.8.1\msvc2022_64\include\QtCore;
-        E:\Qt\6.8.1\msvc2022_64\include\QtGui;
-        E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;
-        D:\Git\Live-Video-Magnification\OpenCV\build\include;
-        %(AdditionalIncludeDirectories)
-      </AdditionalIncludeDirectories>
+		  E:\Qt\6.8.1\msvc2022_64\include;
+		  E:\Qt\6.8.1\msvc2022_64\include\QtCore;
+		  E:\Qt\6.8.1\msvc2022_64\include\QtGui;
+		  E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;
+		  D:\Git\Live-Video-Magnification\OpenCV\build\include;
+		  D:\Git\Live-Video-Magnification\src;
+		  D:\Git\Live-Video-Magnification\src\external;
+		  D:\Git\Live-Video-Magnification\src\external\qxtSlider;
+		  D:\Git\Live-Video-Magnification\src\main;
+		  D:\Git\Live-Video-Magnification\src\main\other;
+		  %(AdditionalIncludeDirectories)
+	  </AdditionalIncludeDirectories>
     </ClCompile>
 
     <Link>
