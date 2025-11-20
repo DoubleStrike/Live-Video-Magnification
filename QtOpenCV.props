@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Qt + OpenCV property sheet for VS2022 -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <!-- Include directories -->
+      <AdditionalIncludeDirectories>
+        E:\Qt\6.8.1\msvc2022_64\include;
+        E:\Qt\6.8.1\msvc2022_64\include\QtCore;
+        E:\Qt\6.8.1\msvc2022_64\include\QtGui;
+        E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;
+        D:\Git\Live-Video-Magnification\OpenCV\build\include;
+        %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+
+    <Link>
+      <!-- Library directories -->
+      <AdditionalLibraryDirectories>
+        E:\Qt\6.8.1\msvc2022_64\lib;
+        D:\Git\Live-Video-Magnification\OpenCV\build\x64\vc16\lib;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+
+      <!-- Libraries to link -->
+      <AdditionalDependencies>
+        Qt6Core.lib;
+        Qt6Gui.lib;
+        Qt6Widgets.lib;
+        opencv_world410.lib;
+        %(AdditionalDependencies)
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+</Project>
