@@ -89,18 +89,12 @@
     <ClCompile Include="src\main\ui\VideoView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\external\qxtSlider\qxtglobal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\external\qxtSlider\qxtnamespace.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\external\qxtSlider\qxtspanslider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\external\qxtSlider\qxtspanslider_p.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\main\helper\ComplexMat.h">
@@ -133,42 +127,53 @@
     <ClInclude Include="src\main\other\Structures.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\main\threads\CaptureThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\threads\PlayerThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\threads\ProcessingThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\threads\SavingThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\CameraConnectDialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\CameraView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\FrameLabel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\MagnifyOptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\MainWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\main\ui\VideoView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\main\ui\CameraConnectDialog.ui" />
-    <None Include="src\main\ui\CameraView.ui" />
-    <None Include="src\main\ui\MagnifyOptions.ui" />
-    <None Include="src\main\ui\MainWindow.ui" />
-    <None Include="src\main\ui\VideoView.ui" />
+    <QtUic Include="src\main\ui\CameraConnectDialog.ui" />
+    <QtUic Include="src\main\ui\CameraView.ui" />
+    <QtUic Include="src\main\ui\MagnifyOptions.ui" />
+    <QtUic Include="src\main\ui\MainWindow.ui" />
+    <QtUic Include="src\main\ui\VideoView.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\external\qxtSlider\qxtspanslider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\external\qxtSlider\qxtspanslider_p.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\external\qxtSlider\qxtnamespace.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\threads\CaptureThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\threads\PlayerThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\threads\ProcessingThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\threads\SavingThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\CameraConnectDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\CameraView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\FrameLabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\MagnifyOptions.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\main\ui\VideoView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

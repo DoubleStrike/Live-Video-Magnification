@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -24,6 +24,8 @@
     <ProjectGuid>{b4e8b3bb-ad34-4f60-a610-fff3de78b97f}</ProjectGuid>
     <RootNamespace>LiveVideoMagnification</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -53,27 +55,41 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtDeploy>false</QtDeploy>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="QtOpenCV_Debug.props" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="QtOpenCV.props" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;D:\Git\Live-Video-Magnification\OpenCV\build\include</LibraryPath>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\Qt\6.8.1\msvc2022_64\include;E:\Qt\6.8.1\msvc2022_64\include\QtCore;D:\Git\Live-Video-Magnification\OpenCV\build\include;E:\Qt\6.8.1\msvc2022_64\include\QtWidgets;E:\Qt\6.8.1\msvc2022_64\include\Qt3DInput</ExternalIncludePath>
@@ -88,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -102,6 +119,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,6 +137,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -133,6 +152,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,6 +175,7 @@
     <ClCompile Include="src\main\magnification\RieszPyramid.cpp" />
     <ClCompile Include="src\main\magnification\SpatialFilter.cpp" />
     <ClCompile Include="src\main\magnification\TemporalFilter.cpp" />
+    <ClCompile Include="src\main\main.cpp" />
     <ClCompile Include="src\main\threads\CaptureThread.cpp" />
     <ClCompile Include="src\main\threads\PlayerThread.cpp" />
     <ClCompile Include="src\main\threads\ProcessingThread.cpp" />
@@ -168,9 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\external\qxtSlider\qxtglobal.h" />
-    <ClInclude Include="src\external\qxtSlider\qxtnamespace.h" />
-    <ClInclude Include="src\external\qxtSlider\qxtspanslider.h" />
-    <ClInclude Include="src\external\qxtSlider\qxtspanslider_p.h" />
+    <QtMoc Include="src\external\qxtSlider\qxtnamespace.h" />
+    <QtMoc Include="src\external\qxtSlider\qxtspanslider.h" />
+    <QtMoc Include="src\external\qxtSlider\qxtspanslider_p.h" />
     <ClInclude Include="src\main\helper\ComplexMat.h" />
     <ClInclude Include="src\main\helper\MatToQImage.h" />
     <ClInclude Include="src\main\helper\SharedImageBuffer.h" />
@@ -181,25 +202,36 @@
     <ClInclude Include="src\main\other\Buffer.h" />
     <ClInclude Include="src\main\other\Config.h" />
     <ClInclude Include="src\main\other\Structures.h" />
-    <ClInclude Include="src\main\threads\CaptureThread.h" />
-    <ClInclude Include="src\main\threads\PlayerThread.h" />
-    <ClInclude Include="src\main\threads\ProcessingThread.h" />
-    <ClInclude Include="src\main\threads\SavingThread.h" />
-    <ClInclude Include="src\main\ui\CameraConnectDialog.h" />
-    <ClInclude Include="src\main\ui\CameraView.h" />
-    <ClInclude Include="src\main\ui\FrameLabel.h" />
-    <ClInclude Include="src\main\ui\MagnifyOptions.h" />
-    <ClInclude Include="src\main\ui\MainWindow.h" />
-    <ClInclude Include="src\main\ui\VideoView.h" />
+    <QtMoc Include="src\main\threads\CaptureThread.h" />
+    <QtMoc Include="src\main\threads\PlayerThread.h" />
+    <QtMoc Include="src\main\threads\ProcessingThread.h" />
+    <QtMoc Include="src\main\threads\SavingThread.h" />
+    <QtMoc Include="src\main\ui\CameraConnectDialog.h" />
+    <QtMoc Include="src\main\ui\CameraView.h" />
+    <QtMoc Include="src\main\ui\FrameLabel.h" />
+    <QtMoc Include="src\main\ui\MagnifyOptions.h" />
+    <QtMoc Include="src\main\ui\MainWindow.h" />
+    <QtMoc Include="src\main\ui\VideoView.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\main\ui\CameraConnectDialog.ui" />
-    <None Include="src\main\ui\CameraView.ui" />
-    <None Include="src\main\ui\MagnifyOptions.ui" />
-    <None Include="src\main\ui\MainWindow.ui" />
-    <None Include="src\main\ui\VideoView.ui" />
+    <QtUic Include="src\main\ui\CameraConnectDialog.ui">
+      <FileType>Document</FileType>
+    </QtUic>
+    <QtUic Include="src\main\ui\CameraView.ui">
+      <FileType>Document</FileType>
+    </QtUic>
+    <QtUic Include="src\main\ui\MagnifyOptions.ui">
+      <FileType>Document</FileType>
+    </QtUic>
+    <QtUic Include="src\main\ui\MainWindow.ui">
+      <FileType>Document</FileType>
+    </QtUic>
+    <QtUic Include="src\main\ui\VideoView.ui">
+      <FileType>Document</FileType>
+    </QtUic>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
