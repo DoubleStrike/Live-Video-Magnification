@@ -37,6 +37,16 @@
         %(AdditionalDependencies)
       </AdditionalDependencies>
     </Link>
+
+	<!-- Copy the required DLLs -->
+	<PostBuildEvent>
+		<Command>
+			xcopy /Y /D "E:\Qt\6.8.1\msvc2022_64\bin\Qt6Cored.dll" "$(OutDir)"
+			xcopy /Y /D "E:\Qt\6.8.1\msvc2022_64\bin\Qt6Guid.dll" "$(OutDir)"
+			xcopy /Y /D "E:\Qt\6.8.1\msvc2022_64\bin\Qt6Widgetsd.dll" "$(OutDir)"
+			xcopy /Y /D "D:\Git\Live-Video-Magnification\OpenCV\build\x64\vc16\bin\opencv_world4100d.dll" "$(OutDir)"
+		</Command>
+	</PostBuildEvent>
   </ItemDefinitionGroup>
 
 </Project>
