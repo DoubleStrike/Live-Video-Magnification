@@ -30,8 +30,10 @@ Makefile*
 
 # Build
 build/
+compile_commands.json
 
 .vscode/
 OpenCV/
 .vs/
 x64/
+.cache/
