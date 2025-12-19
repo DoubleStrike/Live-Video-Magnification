@@ -31,6 +31,7 @@ Makefile*
 # Build
 build/
 compile_commands.json
+/LiveVideoMagnification.vcxproj.user
 
 .vscode/
 OpenCV/
