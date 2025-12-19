@@ -144,10 +144,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /D "$(QtInstallDir)\bin\Qt6Core.dll" "$(OutDir)"
-xcopy /Y /D "$(QtInstallDir)\bin\Qt6Gui.dll" "$(OutDir)"
-xcopy /Y /D "$(QtInstallDir)\bin\Qt6Widgets.dll" "$(OutDir)"
-xcopy /Y /D "$(ProjectDir)\OpenCV\build\x64\vc16\bin\opencv_world4100.dll" "$(OutDir)"
+      <Command>xcopy /Y /D "$(QtInstallDir)\bin\Qt6CoreD.dll" "$(OutDir)"
+xcopy /Y /D "$(QtInstallDir)\bin\Qt6GuiD.dll" "$(OutDir)"
+xcopy /Y /D "$(QtInstallDir)\bin\Qt6WidgetsD.dll" "$(OutDir)"
+xcopy /Y /D "$(ProjectDir)\OpenCV\build\x64\vc16\bin\opencv_world4100D.dll" "$(OutDir)"
 "$(QtInstallDir)\bin\windeployqt.exe" "$(TargetPath)" --no-translations
 </Command>
     </PostBuildEvent>
